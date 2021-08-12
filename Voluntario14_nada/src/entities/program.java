@@ -7,6 +7,8 @@ public class program {
 
 		
 		System.out.println("Olá mundo");
+		System.out.println("Tudo bem ?");	
+		
 	}
 
 }
