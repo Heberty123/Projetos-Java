@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="application/src"/>
+	<classpathentry kind="src" path="atividade_opcional_1/src"/>
+	<classpathentry kind="src" path="atv_opcional_1/src"/>
+	<classpathentry kind="src" path="excercicio8/src"/>
+	<classpathentry kind="src" path="exercicio_instanciacao/src"/>
+	<classpathentry kind="src" path="exercicio1/src"/>
+	<classpathentry excluding="exercicio2/" kind="src" path="exercicio2/src"/>
+	<classpathentry kind="src" path="exercicio2/src/exercicio2"/>
+	<classpathentry excluding="exercicio3/" kind="src" path="exercicio3/src"/>
+	<classpathentry kind="src" path="exercicio3/src/exercicio3"/>
+	<classpathentry kind="src" path="exercicio4/src"/>
+	<classpathentry kind="src" path="exercicio5/src"/>
+	<classpathentry kind="src" path="exercicio6/src"/>
+	<classpathentry kind="src" path="exercicio7/src"/>
+	<classpathentry kind="src" path="exercio5/src"/>
+	<classpathentry kind="src" path="Projetos Udemy/triangle/src"/>
+	<classpathentry kind="src" path="Voluntario1/src"/>
+	<classpathentry kind="src" path="Voluntario10_LacoForEach/src"/>
+	<classpathentry kind="src" path="Voluntario11_List/src"/>
+	<classpathentry kind="src" path="voluntario2/src"/>
+	<classpathentry kind="src" path="Voluntario3/src"/>
+	<classpathentry kind="src" path="Voluntario4_Estatico/src"/>
+	<classpathentry kind="src" path="Voluntario5_estaticClass/src"/>
+	<classpathentry kind="src" path="Voluntario6_estaticClassComplet/src"/>
+	<classpathentry kind="src" path="Voluntario7_encapsulamento/src"/>
+	<classpathentry kind="src" path="Voluntario8_ArraysReference/src"/>
+	<classpathentry kind="src" path="Voluntario9_WrapperClass/src"/>
+	<classpathentry kind="output" path="Projetos Udemy/triangle/build/classes"/>
+</classpath>

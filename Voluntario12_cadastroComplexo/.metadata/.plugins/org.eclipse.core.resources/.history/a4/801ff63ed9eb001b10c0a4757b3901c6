@@ -1,0 +1,29 @@
+
+package program;
+import java.util.Scanner;
+
+public class basic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("*******Seleção por curso********");
+		System.out.println();
+		System.out.println("Se inscreva aqui abaixo : ");
+		
+		System.out.println("***********************************************");
+		System.out.println();
+		System.out.println("digite o nome do canditado : ");
+		sc.nextLine();
+		String name = sc.nextLine();
+		System.out.println("Sua idade : ");
+		int idade = sc.nextInt();
+		System.out.println("Seu CPF : ");
+		char cpf;
+		cpf = sc.next().charAt(10);
+		
+		sc.close();
+	}
+
+}

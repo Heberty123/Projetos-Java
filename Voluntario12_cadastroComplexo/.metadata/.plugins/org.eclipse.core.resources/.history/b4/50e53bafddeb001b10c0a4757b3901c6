@@ -1,0 +1,12 @@
+package entities;
+
+public class cadastro {
+
+	private String name;
+	private int idade;
+	private int cpf;
+	private String curso;
+	private String TipoVest;
+	
+	
+}
