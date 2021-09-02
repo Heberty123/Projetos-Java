@@ -16,11 +16,11 @@ public class program {
 		System.out.print("Enter the number for column of matriz : ");
 		int column = sc.nextInt();
 		
-		int[][] mat = new int [row][row];
+		int[][] mat = new int [row][column];
 
 		
 		for (int i=0; i<row ; i++) {
-			for (int j=0; j<row ; i++) {
+			for (int j=0; j<column ; i++) {
 				
 				System.out.println();
 				System.out.println("enter the number na linha "+i+" e coluna "+j+" : ");
@@ -28,13 +28,7 @@ public class program {
 			}
 			
 		}
-		System.out.println("enter the number na linha "+i+" e coluna "+j+" : ");;
-		System.out.println("enter the number na linha "+i+" e coluna "+j+" : ");
-		System.out.println("enter the number na linha "+i+" e coluna "+j+" : ");;
-		System.out.println("enter the number na linha "+i+" e coluna "+j+" : ");
-		
-		
-		wegfhewqiugfewqufheuqgfwoerff;
+
 		
 		System.out.println();
 		System.out.println("Enter the number you want to search for in the matrix : ");
