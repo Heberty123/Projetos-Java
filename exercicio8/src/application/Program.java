@@ -41,7 +41,6 @@ public class Program {
             System.out.print("Enter Salario of employee "+ (i + 1)+ " : ");
             double salario = sc.nextDouble();
             
-            Employee emp = new Employee(id, name, salario);
             
             list.add(new Employee(id, name, salario));
             
@@ -49,14 +48,14 @@ public class Program {
         
         System.out.println("Enter the employee id that will have salary increase : ");
         int id = sc.nextInt(); 
-        Employee emp = list.stream().filter(x -> x.setId() == id).findFirst().orElse(null);
-		if (emp == null) {
+        Employee empp = list.stream().filter(x -> x.setId() == id).findFirst().orElse(null);
+		if (empp == null) {
 			System.out.println("This id does not exist!");
 		}
 		else {
 			System.out.print("Enter the percentage: ");
 			double percentage = sc.nextDouble();
-			emp.IncreaseSalary(percentage);
+			empp.IncreaseSalary(percentage);
 		}
 		
 		System.out.println();
