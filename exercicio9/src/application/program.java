@@ -34,6 +34,8 @@ public class program {
 		System.out.println("enter the number na linha "+i+" e coluna "+j+" : ");
 		
 		
+		wegfhewqiugfewqufheuqgfwoerff;
+		
 		System.out.println();
 		System.out.println("Enter the number you want to search for in the matrix : ");
 		int x = sc.nextInt();
