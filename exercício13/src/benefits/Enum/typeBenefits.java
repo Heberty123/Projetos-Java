@@ -1,0 +1,11 @@
+package benefits.Enum;
+
+public enum typeBenefits {
+
+	PAID_VACATION,
+	TRANSPORTATION_VOUCHERS,
+	FGTS,
+	MEAL_TICKET,
+	FUEL_VALE,
+	CHILDCARE_ASSISTANCE
+}
