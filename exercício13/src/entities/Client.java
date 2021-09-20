@@ -7,7 +7,7 @@ import Items.Products;
 
 public class Client extends People{
 
-	private List<Products> list = new ArrayList<Products>();
+	private Products products;
 
 	
 	public Client() {
@@ -15,29 +15,22 @@ public class Client extends People{
 	}
 	
 
-	public Client(String name, int age, double wage) {
+	public Client(String name, int age, double wage, Products products) {
 		super(name, age, wage);
+		this.products = products;
+	}
+	
+
+	public Products getProducts() {
+		return products;
 	}
 
 
-	public List<Products> getList() {
-		return list;
+	public void setProducts(Products products) {
+		this.products = products;
 	}
 
 
-	@Override
-	public boolean Buy(String name, double price, int quantity) {
-		if (price * quantity > super.getWage()) {
-			
-			return false;
-		} else {
-			
-			list.add(new Products(name, price, quantity));
-			super.wage -= price*quantity;
-			
-			return true;
-		}
-	}
 	
 	
 	@Override
@@ -45,10 +38,8 @@ public class Client extends People{
 		
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString() + ": \n");
-			for(Products itens : list) {
 			
-				sb.append(itens.toString());
-			}
+		sb.append(this.getProducts().toString());
 			
 			return "OI";
 	}

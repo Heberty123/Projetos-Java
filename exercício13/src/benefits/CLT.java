@@ -10,6 +10,8 @@ public interface CLT {
 		
 	}
 
+	boolean Buy(double price, int quantity);
+
 
 
 }

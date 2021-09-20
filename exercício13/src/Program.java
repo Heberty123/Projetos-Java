@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+import Items.Products;
+import benefits.Enum.typeBenefits;
+import entities.Client;
 import entities.Employee;
 import entities.People;
 import java.util.ArrayList;
@@ -35,13 +38,14 @@ public class Program {
 				System.out.print("write wage: ");
 				double wage = sc.nextDouble();
 				
-				people.add(new Employee(name, age, wage));
 				
-				
-				System.out.print("\nwrite how many products you want to buy: ");
-				int number = sc.nextInt();
-				for(int z = 1; z <= number ; z++) {
-					System.out.println("Product "+z+":");
+				System.out.print("\nwrite what's CLT of Employee: ");
+				String clt = sc.next();
+							
+						
+				System.out.print("\nwrite the products to buy(Warning: values of product doens't have to exceed the salary limit): ");
+
+					System.out.println("Product:");
 					System.out.print("write the name:");
 					String namee = sc.next();
 					System.out.print("write the price:");
@@ -49,17 +53,61 @@ public class Program {
 					System.out.print("write the quantity:");
 					int quantity = sc.nextInt();
 					
-					people.get(i).Buy(namee, price, quantity);
+					if(price*quantity > wage) {
+						
+						people.add(new Employee(name, age, wage, typeBenefits.valueOf(clt), null));
+					} else {
+						
+						people.add(new Employee(name, age, wage, typeBenefits.valueOf(clt), new Products(namee, price, quantity)));
+
+					}
+					
 					
 
-				}
+				
 
+			} else{
+				
+				System.out.print("write name: ");
+				sc.nextLine();
+				String name = sc.nextLine();
+				System.out.print("write age: ");
+				int age = sc.nextInt();
+				System.out.print("write wage: ");
+				double wage = sc.nextDouble();
+									
+				System.out.print("\nwrite the products to buy(Warning: values of product doens't have to exceed the salary limit): ");
+
+					System.out.println("Product:");
+					System.out.print("write the name:");
+					String namee = sc.next();
+					System.out.print("write the price:");
+					double price = sc.nextDouble();
+					System.out.print("write the quantity:");
+					int quantity = sc.nextInt();
+					
+					
+					if(price*quantity > wage) {
+						
+						people.add(new Client(name, age, wage, null));
+					} else {
+						
+						people.add(new Client(namee, age, wage, new Products(namee, price, quantity)));
+
+					}
+				
 			}
 			
 		}
 		
-		people.get(1).toString();
-
 		
+		for(People am: people) {
+			
+			am.toString();
+		}
+		
+		System.out.print("Cade vc !");
+		
+		sc.close();
 	}
 }

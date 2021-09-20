@@ -48,8 +48,9 @@ public abstract class People {
 		return this.name + " idade: " + this.age + " salário: " + this.wage;
 	}
 	
-	public abstract boolean Buy(String name, double price, int quantity);
-	
+
+
+
 	
 
 }
