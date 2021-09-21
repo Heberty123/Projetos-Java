@@ -36,4 +36,8 @@ public abstract class People {
 	
 	public abstract void adicionar(String name, double price, int quantity);
 	
+	
+	public abstract boolean buy(double price, int quantity, double salario);
+
+	
 }

@@ -54,7 +54,17 @@ public class Program {
 						System.out.println("Quantity: ");
 						int quantity = sc.nextInt();
 						
-						list.get(i).adicionar(namee, price, quantity);
+						if(list.get(i).buy(price, quantity, list.get(i).getSalario())) {
+							
+							list.get(i).adicionar(namee, price, quantity);
+						}
+						else {
+							
+							System.out.println("Não foi possível fazer compra, pois o valor total excende o seu salário !");
+						}
+						
+						
+						
 						
 					}
 				}else {
@@ -87,7 +97,16 @@ public class Program {
 						System.out.println("Quantity: ");
 						int quantity = sc.nextInt();
 						
-						list.get(i).adicionar(namee, price, quantity);
+						if(list.get(i).buy(price, quantity, list.get(i).getSalario())) {
+							
+							list.get(i).adicionar(namee, price, quantity);
+						}
+						else {
+							
+							System.out.println("Não foi possível fazer compra, pois o valor total excende o seu salário !");
+						}	
+						
+						
 						
 					}
 				}else {
