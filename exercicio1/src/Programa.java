@@ -14,11 +14,11 @@ import entities.Rentangulo;
 
 public class Programa {
     
-   
+   System.out.pritn("ejn2ojfnjo2nfj2");
     public static void main (String[] argc){
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner (System.in);
-        
+     // 4gu34guo34non43o   
         Rentangulo rentangulo = new Rentangulo();
         System.out.printf("%n Digite  a largura do retangulo : ");
         rentangulo.largura = sc.nextDouble();
