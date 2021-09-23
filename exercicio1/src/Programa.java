@@ -14,6 +14,11 @@ import entities.Rentangulo;
 
 public class Programa {
     
+    System.out.print("efhvrovnrjo3vnro3");
+    
+    // 3rigb3rjvb3rjbv3rjo3ojn3  
+        
+        System.out.print("jecjebcej");
    
     public static void main (String[] argc){
         Locale.setDefault(Locale.US);
