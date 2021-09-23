@@ -3,16 +3,18 @@ package entities;
 public abstract class People {
 
 	private String name;
-	private double salario;
-	
+	protected double salario;
+	private double ultSalarios;
+
 	
 	public People() {
 	}
 
-	public People(String name, double salario) {
+	public People(String name, double salario, double ultSalarios) {
 		super();
 		this.name = name;
 		this.salario = salario;
+		this.ultSalarios = salario;
 	}
 
 	public String getName() {
@@ -31,6 +33,15 @@ public abstract class People {
 		this.salario = salario;
 	}
 	
+	
+	public double getUltSalarios() {
+		return ultSalarios;
+	}
+
+	public void setUltSalarios(double ultSalarios) {
+		this.ultSalarios = ultSalarios;
+	}
+
 	public abstract String toString();
 	
 	

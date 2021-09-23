@@ -25,7 +25,7 @@ public class Program {
 		
 		for (int i = 0; i < number; i++) {
 			
-			System.out.println("\nPeople "+i+1);
+			System.out.println("\nPeople "+(i+1));
 			System.out.print("Digite seu nome: ");
 			String name = sc.next();
 			System.out.print("Digite seu salário: ");
@@ -38,7 +38,7 @@ public class Program {
 				System.out.println("Digite sua idade: ");
 				int age = sc.nextInt();
 				
-				list.add(new Client(name, salario, age, new ArrayList<Products>()));
+				list.add(new Client(name, salario, 0, age, new ArrayList<Products>()));
 				
 				
 				System.out.println("Deseja quantos produtos: ");
@@ -79,7 +79,7 @@ public class Program {
 				System.out.println("Digite sua idade: ");
 				int age = sc.nextInt();
 				
-				list.add(new Employee(name, salario, age, new ArrayList<Products>()));
+				list.add(new Employee(name, salario, 0, age, new ArrayList<Products>()));
 				
 				
 				
