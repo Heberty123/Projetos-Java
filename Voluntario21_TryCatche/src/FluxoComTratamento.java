@@ -6,7 +6,7 @@ public class FluxoComTratamento {
 		    metodo1();
 		} catch(Exception ex) {
 		    String msg = ex.getMessage();
-		    System.out.println("ArithmeticException " + msg);
+		    System.out.println("Exceção " + msg);
 		    ex.printStackTrace();
 		} 
 		System.out.println("Fim do main");
