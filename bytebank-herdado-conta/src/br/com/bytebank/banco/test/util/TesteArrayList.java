@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import br.com.bytebank.banco.contas.*;
 
-public class Teste {
+public class TesteArrayList {
     public static void main(String[] args) {
 
         ArrayList lista = new ArrayList();
