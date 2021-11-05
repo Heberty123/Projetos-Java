@@ -6,8 +6,8 @@ public class Gerente extends Employee implements senha {
 	
 	private static int senha = 1234;
 
-	public Gerente(String name, double salario, Date nascimento) {
-		super(name, salario, nascimento);
+	public Gerente(String name, double salario, Date nascimento, String position) {
+		super(name, salario, nascimento, position);
 		
 	}
 	
@@ -27,5 +27,7 @@ public class Gerente extends Employee implements senha {
 		
 		return "Senha confirmada com sucesso";
 	}
+	
+	
 
 }

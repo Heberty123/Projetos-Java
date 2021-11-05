@@ -7,5 +7,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="libs/jar_Contas.jardesc"/>
+	<classpathentry kind="lib" path="libs/jarrr.jar"/>
+	<classpathentry kind="lib" path="libs/CreatedEmployee.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
