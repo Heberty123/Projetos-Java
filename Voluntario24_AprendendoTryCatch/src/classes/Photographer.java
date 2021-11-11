@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Photographer extends Employee {
 
-	public Photographer(String name, double salario, Date nascimento, String position) {
+	public Photographer(String name, double salario, String nascimento, String position) {
 		super(name, salario, nascimento, position);
 		
 	}

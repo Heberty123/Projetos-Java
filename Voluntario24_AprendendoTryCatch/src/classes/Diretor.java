@@ -6,7 +6,7 @@ public class Diretor extends Employee implements senha {
 	
 	private int senha = 5987;
 
-	public Diretor(String name, double salario, Date nascimento, String position) {
+	public Diretor(String name, double salario, String nascimento, String position) {
 		super(name, salario, nascimento, position);
 		
 	}

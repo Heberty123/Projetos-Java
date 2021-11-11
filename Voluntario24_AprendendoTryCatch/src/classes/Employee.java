@@ -11,11 +11,11 @@ public abstract class Employee {
 	
 	private String name;
 	protected double salario;
-	private Date nascimento;
+	private String nascimento;
 	private List<Buy>list;
 	private String position;
 	
-	public Employee(String name, double salario, Date nascimento, String position) {
+	public Employee(String name, double salario, String nascimento, String position) {
 		super();
 		this.name = name;
 		this.salario = salario;
@@ -41,11 +41,11 @@ public abstract class Employee {
 		this.salario = salario;
 	}
 
-	public Date getNascimento() {
+	public String getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(Date nascimento) {
+	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
 	
