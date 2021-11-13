@@ -27,6 +27,7 @@ public class TesteArrayListEquals {
 		
 		Conta cc3 = new ContaCorrente(22, 22);
 		boolean existe = lista.contains(cc3);
+
 		
 		System.out.println("Já existe? " + existe);
 		

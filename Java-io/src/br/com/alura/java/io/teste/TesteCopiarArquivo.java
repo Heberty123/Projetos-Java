@@ -19,11 +19,11 @@ public class TesteCopiarArquivo {
 		// TODO Auto-generated method stub
 		 
 		//Fluxo de Entrada com Arquivo	
-		InputStream fis = System.in;
+		InputStream fis = new FileInputStream("tes.txt"); // System.in
 		Reader isr = new InputStreamReader(fis);
 		BufferedReader br  = new BufferedReader(isr);
 		
-		OutputStream fos = new FileOutputStream("tes2.txt");
+		OutputStream fos = new FileOutputStream("tes2.txt"); // System.out
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw  = new BufferedWriter(osw);
 		
