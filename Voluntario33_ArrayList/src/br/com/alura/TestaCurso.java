@@ -1,5 +1,7 @@
 package br.com.alura;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TestaCurso {
@@ -13,6 +15,16 @@ public class TestaCurso {
         javaColecoes.adiciona(new Aula("Modelando com colecoes", 24));
 		
 		
-		System.out.println(javaColecoes.getAulas());
+		List<Aula> aulasImutaveis = javaColecoes.getAulas();
+		System.out.println(aulasImutaveis);
+		
+		List<Aula> aulas = new ArrayList<>(aulasImutaveis);
+		
+		Collections.sort(aulas);
+		System.out.println(aulas);
+		System.out.println(javaColecoes.getTempoTotal());
+		
+		System.out.println(javaColecoes);
+		
 	}
 }
