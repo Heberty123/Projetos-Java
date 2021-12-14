@@ -1,5 +1,9 @@
 package br.com.alura;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
 
 	public static void main(String[] args) {
@@ -37,5 +41,15 @@ public class TestaCursoComAluno {
         // obrigatoriamente o seguinte é true: 
         
         System.out.println(a1.hashCode() == turini.hashCode());
+        
+        
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterator = alunos.iterator();
+        while(iterator.hasNext()) {
+        	Aluno passos = iterator.next();
+        	System.out.println(passos);
+        }
+
+        
 	}
 }

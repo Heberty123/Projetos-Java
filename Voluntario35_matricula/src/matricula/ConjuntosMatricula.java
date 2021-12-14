@@ -8,32 +8,18 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class ConjuntosMatricula implements Comparator<Matricula> {
-	
-	private static int id = 1;
+public class ConjuntosMatricula {
 
-	private TreeSet<Matricula> treeset = new TreeSet<Matricula>(new Comparator<Matricula>() {
-        @Override
-        public int compare(Matricula s1, Matricula s2) {
-        	if(s1.getNumber() > s2.getNumber()) {
-    			return 1;
-    		}
-    		if(s1.getNumber() < s2.getNumber()) {
-    			return -1;
-    		}
-    		
-    		return 0;
-        }
-    });
+
+	private TreeSet<Matricula> treeset = new TreeSet<Matricula>((s1, s2) -> Long.compare(s1.getData().getTime(), s2.getData().getTime()));
 	
 	private Map<Integer, Matricula> maps = new HashMap<Integer, Matricula>();
 
-
+	
 	
 	public void adiciona(Matricula o) {
 		treeset.add(o);
-		maps.put(id, o);
-		id++;
+		maps.put(o.getId(), o);
 	}
 	
 	public void remove(Integer number) {
@@ -57,25 +43,18 @@ public class ConjuntosMatricula implements Comparator<Matricula> {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Maps de matricula: \n");
 		
+		
 		 for (Entry<Integer, Matricula> me : maps.entrySet()) {
-	            sb.append(me.getKey() + ": ");
+	            sb.append("number " + me.getKey() + ": ");
 	            sb.append(me.getValue().toString() + "\n");
 	        }
 		return "" + sb;
 	}
+	
+	
+	
+	
 
-
-	@Override
-	public int compare(Matricula s1, Matricula s2) {
-		if(s1.getNumber() < s2.getNumber()) {
-			return 1;
-		}
-		if(s1.getNumber() > s2.getNumber()) {
-			return -1;
-		}
-		
-		return 0;
-	}
 
 
 }

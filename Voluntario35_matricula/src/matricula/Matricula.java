@@ -1,21 +1,36 @@
 package matricula;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Matricula {
 
+	private int id;
 	private Date data;
-	private Integer number;
 	private String curso;
 	private double valor;
 	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
-	public Matricula(Date data, Integer number, String curso, double valor) {
-		super();
+	private static int incremento = 1;
+	
+	
+	public Matricula(Date data, String curso, double valor) {
+		this.id = incremento;
 		this.data = data;
-		this.number = number;
 		this.curso = curso;
 		this.valor = valor;
+		incremento++;
+	}
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public Date getData() {
@@ -25,16 +40,6 @@ public class Matricula {
 
 	public void setData(Date data) {
 		this.data = data;
-	}
-
-
-	public Integer getNumber() {
-		return number;
-	}
-
-
-	public void setNumber(Integer number) {
-		this.number = number;
 	}
 
 
@@ -61,8 +66,7 @@ public class Matricula {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return (String.format("Matricula: %d foi realizado no " + this.getData() + ", curso: %s e valor: %.2f\n",
-				this.getNumber(), this.getCurso(), this.getValor()));
+		return (String.format("id: %d - Matricula realizado no " + sdf.format(this.data) + ", curso: %s e valor: %.2f\n", this.id , this.getCurso(), this.getValor()));
 	}
 	
 	
