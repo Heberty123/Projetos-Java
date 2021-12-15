@@ -76,7 +76,7 @@ public class Matricula {
 	
 	public boolean ehIgual(Object o) {
 		Matricula m = (Matricula) o;
-		if(this.valor == m.getValor() && this.curso == m.getCurso()) {
+		if(this.valor == m.getValor() && this.curso == m.getCurso() && this.getData().getTime() == m.getData().getTime()) {
 			return true;
 		}
 		return false;
