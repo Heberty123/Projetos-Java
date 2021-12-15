@@ -63,11 +63,32 @@ public class Matricula {
 	}
 	
 	
+
+	@Override
+	public boolean equals(Object o) {
+		Matricula m = (Matricula) o;
+		if(this.data == m.getData() && this.valor == m.getValor()) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+	public boolean ehIgual(Object o) {
+		Matricula m = (Matricula) o;
+		if(this.valor == m.getValor() && this.curso == m.getCurso()) {
+			return true;
+		}
+		return false;
+	}
+	
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return (String.format("id: %d - Matricula realizado no " + sdf.format(this.data) + ", curso: %s e valor: %.2f\n", this.id , this.getCurso(), this.getValor()));
+		return (String.format("id %d - Matricula realizado no " + sdf.format(this.data) + ", curso: %s e valor: %.2f\n", this.getId(), this.getCurso(), this.getValor()));
 	}
+	
 	
 	
 }
