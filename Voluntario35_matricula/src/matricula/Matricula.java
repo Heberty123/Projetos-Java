@@ -2,6 +2,9 @@ package matricula;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map.Entry;
+
+import Excepetion.DomainException;
 
 public class Matricula {
 
@@ -15,15 +18,18 @@ public class Matricula {
 	private static int incremento = 1;
 	
 	
-	public Matricula(Date data, String curso, double valor) {
-		this.id = incremento;
-		this.data = data;
-		this.curso = curso;
-		this.valor = valor;
-		incremento++;
+	public Matricula(Date data, String curso, double valor) throws DomainException {
+		if(exist(data, curso, valor)) {
+			throw new DomainException(String.format("Inválido: Id %d de matricula já existe na lista !", incremento));
+		}else {
+			this.id = incremento;
+			this.data = data;
+			this.curso = curso;
+			this.valor = valor;
+			incremento++;
+		}
 	}
-	
-	
+
 
 	public int getId() {
 		return id;
@@ -63,25 +69,32 @@ public class Matricula {
 	}
 	
 	
-
-	@Override
-	public boolean equals(Object o) {
-		Matricula m = (Matricula) o;
-		if(this.data == m.getData() && this.valor == m.getValor()) {
-			return true;
+	private boolean exist(Date data2, String curso2, double valor2) {
+		for (Matricula matricula : new ConjuntosMatricula().getTreeset()) {
+			if(matricula.equals(data2, curso2, valor2)) {
+				return true;
+			}
 		}
 		return false;
 	}
 	
-	
+
 	public boolean ehIgual(Object o) {
 		Matricula m = (Matricula) o;
-		if(this.valor == m.getValor() && this.curso == m.getCurso() && this.getData().getTime() == m.getData().getTime()) {
+		if(this.data.getTime() == m.getData().getTime() && this.curso == m.getCurso() && this.valor == m.getValor()) {
 			return true;
 		}
 		return false;
 	}
 	
+
+	public boolean equals(Date data, String curso, double valor) {
+		if(this.data.getTime() == data.getTime() && this.curso == curso && this.valor == valor) {
+			return true;
+		}
+		return false;
+	}
+
 	
 	@Override
 	public String toString() {

@@ -14,43 +14,33 @@ import Excepetion.DomainException;
 public class ConjuntosMatricula {
 
 
-	private static TreeSet<Matricula> treeset = new TreeSet<Matricula>((s1, s2) -> Long.compare(s1.getData().getTime(), s2.getData().getTime()));
+	private static TreeSet<Matricula> treeset = new TreeSet<Matricula>((s1, s2) -> Double.compare(s1.getId(), s2.getId()));
 	
 	private static Map<Integer, Matricula> maps = new HashMap<Integer, Matricula>();
 	
 	
+	public static Map<Integer, Matricula> getMaps() {
+		return maps;
+	}
+
+
 	public TreeSet<Matricula> getTreeset() {
 		return treeset;
 	}
 	
 
 	public void adiciona(Matricula o) throws DomainException {
-		if(containsValue(o)) {
-			throw new DomainException("Inválido: Esse matricula já existe na Lista");
-		}else {
 			treeset.add(o);
 			maps.put(o.getId(), o);
-		}
 	}
+	
 	
 	public void remove(Integer number) {
 		Matricula matricula = maps.get(number);
 		treeset.remove(matricula);
 		maps.remove(number, matricula);
 	}
-	
-	
-/*	@Override
-	public boolean contains(Object o) {
-		Matricula m = (Matricula) o;
-		for(Matricula test: treeset) {
-			if(m.equals(test)) {
-				return true;
-			}
-		}   
-		return false;
-    }
-*/
+
 	
 	
 	
@@ -79,7 +69,7 @@ public class ConjuntosMatricula {
 
 	
 	
-/*	public String mostraHashMap() {
+	public String mostraHashMap() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Maps de matricula: \n");
 		
@@ -90,7 +80,7 @@ public class ConjuntosMatricula {
 	        }
 		return "" + sb;
 	}
-*/	
+	
 	
 	
 	
